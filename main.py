@@ -3,8 +3,23 @@ import turtle as trtl
 star = trtl.Turtle()
 
 # defining some variables for later
+# don't touch this stuff
 point = 18
 poi = 0
+
+# edit these equally
+topstar = 27
+center = 0
+
+uplx = -10
+uply = 5
+uprx = 5
+upry = 9
+
+botlx = -4
+botly = -10
+botrx = 6
+botry = -6
 
 # the actual star 
 star.speed(10)
@@ -13,7 +28,7 @@ star.penup()
 star.pencolor("goldenrod")
 star.fillcolor("gold")
 star.begin_fill()
-star.goto(0,27)
+star.goto(center,topstar)
 star.setheading(-72)
 star.pendown()
 while grr < 5:
@@ -26,13 +41,14 @@ star.end_fill()
 
 # I'm impatient so I sped it up
 star.speed(0)
-star.goto(0,0)
+star.goto(center,center)
 
 # the lines in the middle of the star
 star.pendown()
 star.pensize(1)
-star.pencolor("goldenrod") # if we don't like it we don't have to have
-while poi < 5:             # the lines in the middle
+star.pencolor("goldenrod") 
+# if we don't like it we don't have to have the lines in the middle
+while poi < 5:            
   star.setheading(point)
   star.forward(25)
   star.backward(25)
@@ -44,7 +60,7 @@ star.hideturtle()
 
 def outlines():
   grr = 0
-  star.goto(0,0)
+  star.goto(center,center)
   star.setheading(90)
   star.pendown()
   star.pencolor("goldenrod")
@@ -88,21 +104,21 @@ pika = 0
 while pika < 1:
   star.pensize(1)
   star.penup()
-  star.goto(-10,5)
+  star.goto(uplx,uply)
   sparkle()
-  star.goto(-4,-10)
+  star.goto(botlx,botly)
   sparkle()
-  star.goto(-10,5)
+  star.goto(uplx,uply)
   unsparkle()
-  star.goto(5,9)
+  star.goto(uprx,upry)
   sparkle()
-  star.goto(-4,-10)
+  star.goto(botlx,botly)
   unsparkle()
-  star.goto(6,-6)
+  star.goto(botrx,botry)
   sparkle()
-  star.goto(5,9)
+  star.goto(uprx,upry)
   unsparkle()
-  star.goto(6,-6)
+  star.goto(botrx,botry)
   unsparkle()
   star.pensize(0.75)
   outlines()
