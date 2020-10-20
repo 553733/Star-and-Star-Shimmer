@@ -22,7 +22,7 @@ botrx = 6
 botry = -6
 
 # the actual star 
-star.speed(10)
+star.speed(0)
 grr = 0
 star.penup()
 star.pencolor("goldenrod")
